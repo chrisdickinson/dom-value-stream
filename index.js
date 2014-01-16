@@ -3,10 +3,12 @@ var readable = require('readable-stream')
 
 module.exports = Values
 
-function Values() {
+function Values(placeholder) {
   if(!(this instanceof Values)) {
     return new Values
   }
+
+  this._placeholder = placeholder === undefined ? '' : placeholder
 
   readable.Transform.call(this, {
       objectMode: true
@@ -26,7 +28,7 @@ proto._transform = function(event, enc, ready) {
 
   event.target.value !== null && event.target.value !== undefined ?
     this.push(event.target.value) :
-    this.push('')
+    this.push(this._placeholder)
 
   ready()
 }

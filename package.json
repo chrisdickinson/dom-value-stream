@@ -1,6 +1,6 @@
 {
   "name": "dom-value-stream",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "transform domevents into values",
   "main": "index.js",
   "scripts": {

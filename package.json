@@ -1,0 +1,53 @@
+{
+  "name": "dom-value-stream",
+  "version": "0.0.0",
+  "description": "transform domevents into values",
+  "main": "index.js",
+  "scripts": {
+    "test": "testling .",
+    "test-cov": "browserify test.js -t coverify | testling | coverify"
+  },
+  "testling": {
+    "files": [
+      "./test.js"
+    ],
+    "browsers": [
+      "ie/7..latest",
+      "firefox/16..latest",
+      "firefox/nightly",
+      "chrome/22..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/5.0..latest",
+      "iphone/5.0..latest"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chrisdickinson/dom-value-stream.git"
+  },
+  "keywords": [
+    "dom",
+    "value",
+    "stream"
+  ],
+  "author": "Chris Dickinson <chris@neversaw.us> (http://neversaw.us/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisdickinson/dom-value-stream/issues"
+  },
+  "devDependencies": {
+    "tape": "~2.3.2",
+    "dom-event-stream": "0.0.1",
+    "testling": "~1.5.6",
+    "browserify": "~3.20.0",
+    "ever": "0.0.3",
+    "coverify": "~1.0.4"
+  },
+  "dependencies": {
+    "readable-stream": "~1.1.10",
+    "inherits": "~2.0.1"
+  }
+}
